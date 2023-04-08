@@ -59,8 +59,8 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <div id="map"></div>
-                                    <!-- <div id="mapid"></div> -->
+                                    <!-- <div id="map"></div> -->
+                                    <div id="mapid"></div>
                                 </div>
                                 <div class="col-md-4">
                                     <form action="index.php?page=visualisasi" method="POST">
@@ -105,68 +105,12 @@
     </div>
 </section>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly" defer></script>
-
 <script>
-    // Note: This example requires that you consent to location sharing when
-    // prompted by your browser. If you see the error "The Geolocation service
-    // failed.", it means you probably did not give permission for the browser to
-    // locate you.
-    let map, infoWindow;
-
-    function initMap() {
-        map = new google.maps.Map(document.getElementById("map"), {
-            center: {
-                lat: <?= $data1['latitude'] ?>,
-                lng: <?= $data1['lonfitude'] ?>
-            },
-            zoom: 15,
-        });
-        infoWindow = new google.maps.InfoWindow();
-
-        const locationButton = document.createElement("button");
-
-        locationButton.textContent = "Pan to Current Location";
-        locationButton.classList.add("custom-map-control-button");
-        map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
-        locationButton.addEventListener("click", () => {
-            // Try HTML5 geolocation.
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(
-                    (position) => {
-                        const pos = {
-                            lat: position.coords.latitude,
-                            lng: position.coords.longitude,
-                        };
-
-                        infoWindow.setPosition(pos);
-                        infoWindow.setContent("Location found.");
-                        infoWindow.open(map);
-                        map.setCenter(pos);
-                    },
-                    () => {
-                        handleLocationError(true, infoWindow, map.getCenter());
-                    }
-                );
-            } else {
-                // Browser doesn't support Geolocation
-                handleLocationError(false, infoWindow, map.getCenter());
-            }
-        });
-    }
-
-    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-        infoWindow.setPosition(pos);
-        infoWindow.setContent(
-            browserHasGeolocation ?
-            "Error: The Geolocation service failed." :
-            "Error: Your browser doesn't support geolocation."
-        );
-        infoWindow.open(map);
-    }
-
-    window.initMap = initMap;
-    // var mymap = L.map('mapid').setView([<?= $data1['latitude'] ?>, <?= $data1['lonfitude'] ?>], 13);
+    var mymap = L.map('mapid').setView([<?= $data1['latitude'] ?>, <?= $data1['lonfitude'] ?>], 13);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(mymap);
     // L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZWdvdmFmbGF2aWEiLCJhIjoiY2ttMWdqNWZuMWhiNDJ1cWU5dHI1bWkxMCJ9.OUrt1MtkrK088C-WlI8SDA', {
     //     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     //     maxZoom: 18,
@@ -174,16 +118,16 @@
     //     tileSize: 512,
     //     zoomOffset: -1,
     // }).addTo(mymap);
-    // var marker = L.marker([<?= $data1['latitude'] ?>, <?= $data1['lonfitude'] ?>]).addTo(mymap);
-    // var popup = L.popup();
+    var marker = L.marker([<?= $data1['latitude'] ?>, <?= $data1['lonfitude'] ?>]).addTo(mymap);
+    var popup = L.popup();
 
-    // function onMapClick(e) {
-    //     popup
-    //         .setLatLng(e.latlng)
-    //         .setContent("<?= $data1['nama_kecamatan'] ?>")
-    //         .openOn(mymap);
-    // }
+    function onMapClick(e) {
+        popup
+            .setLatLng(e.latlng)
+            .setContent("<?= $data1['nama_kecamatan'] ?>")
+            .openOn(mymap);
+    }
 
-    // mymap.on('click', onMapClick);
+    mymap.on('click', onMapClick);
 </script>
 <?php } ?>
