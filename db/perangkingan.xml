@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.8.4
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Generation Time: Jun 15, 2023 at 04:39 PM
+- Server version: 10.1.37-MariaDB
+- PHP Version: 7.3.0
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="bappeda_ahp" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="perangkingan">
+                CREATE TABLE `perangkingan` (
+                  `rk_id` int(11) NOT NULL AUTO_INCREMENT,
+                  `rk_alternatif_nama` varchar(255) DEFAULT NULL,
+                  `rk_kriteria_id` int(11) DEFAULT NULL,
+                  `rk_nilai` double DEFAULT NULL,
+                  `rk_total` decimal(10,0) DEFAULT NULL,
+                  PRIMARY KEY (`rk_id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=421 DEFAULT CHARSET=latin1;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'bappeda_ahp'
+    -->
+    <database name="bappeda_ahp">
+        <!-- Table perangkingan -->
+        <table name="perangkingan">
+            <column name="rk_id">386</column>
+            <column name="rk_alternatif_nama">Peningkatan Jalan dalam Kota Pematang Rebah </column>
+            <column name="rk_kriteria_id">1</column>
+            <column name="rk_nilai">0.269947838412</column>
+            <column name="rk_total">NULL</column>
+        </table>
+        <table name="perangkingan">
+            <column name="rk_id">387</column>
+            <column name="rk_alternatif_nama">Peningkatan Jalan dalam Kota Pematang Rebah </column>
+            <column name="rk_kriteria_id">2</column>
+            <column name="rk_nilai">0.269947838412</column>
+            <column name="rk_total">NULL</column>
+        </table>
+        <table name="perangkingan">
+            <column name="rk_id">388</column>
+            <column name="rk_alternatif_nama">Peningkatan Jalan dalam Kota Pematang Rebah </column>
+            <column name="rk_kriteria_id">3</column>
+            <column name="rk_nilai">0.269947838412</column>
+            <column name="rk_total">NULL</column>
+        </table>
+        <table name="perangkingan">
+            <column name="rk_id">389</column>
+            <column name="rk_alternatif_nama">Peningkatan Jalan dalam Kota Pematang Rebah </column>
+            <column name="rk_kriteria_id">4</column>
+            <column name="rk_nilai">0.269947838412</column>
+            <column name="rk_total">NULL</column>
+        </table>
+        <table name="perangkingan">
+            <column name="rk_id">390</column>
+            <column name="rk_alternatif_nama">Peningkatan Jalan dalam Kota Pematang Rebah </column>
+            <column name="rk_kriteria_id">5</column>
+            <column name="rk_nilai">0.269947838412</column>
+            <column name="rk_total">NULL</column>
+        </table>
+        <table name="perangkingan">
+            <column name="rk_id">391</column>
+            <column name="rk_alternatif_nama">Pembuatan Box Cover Jalan Tanah Datar - Sibabat </column>
+            <column name="rk_kriteria_id">1</column>
+            <column name="rk_nilai">0.217102791072</column>
+            <column name="rk_total">NULL</column>
+        </table>
+        <table name="perangkingan">
+            <column name="rk_id">392</column>
+            <column name="rk_alternatif_nama">Pembuatan Box Cover Jalan Tanah Datar - Sibabat </column>
+            <column name="rk_kriteria_id">2</column>
+            <column name="rk_nilai">0.217102791072</column>
+            <column name="rk_total">NULL</column>
+        </table>
+        <table name="perangkingan">
+            <column name="rk_id">393</column>
+            <column name="rk_alternatif_nama">Pembuatan Box Cover Jalan Tanah Datar - Sibabat </column>
+            <column name="rk_kriteria_id">3</column>
+            <column name="rk_nilai">0.217102791072</column>
+            <column name="rk_total">NULL</column>
+        </table>
+        <table name="perangkingan">
+            <column name="rk_id">394</column>
+            <column name="rk_alternatif_nama">Pembuatan Box Cover Jalan Tanah Datar - Sibabat </column>
+            <column name="rk_kriteria_id">4</column>
+            <column name="rk_nilai">0.217102791072</column>
+            <column name="rk_total">NULL</column>
+        </table>
+        <table name="perangkingan">
+            <column name="rk_id">395</column>
+            <column name="rk_alternatif_nama">Pembuatan Box Cover Jalan Tanah Datar - Sibabat </column>
+            <column name="rk_kriteria_id">5</column>
+            <column name="rk_nilai">0.217102791072</column>
+            <column name="rk_total">NULL</column>
+        </table>
+        <table name="perangkingan">
+            <column name="rk_id">396</column>
+            <column name="rk_alternatif_nama">Peningkatan Ruang Labor Komputer dan Perabotnya Smp 3 Seberida</column>
+            <column name="rk_kriteria_id">1</column>
+            <column name="rk_nilai">0.0936805314524</column>
+            <column name="rk_total">NULL</column>
+        </table>
+        <table name="perangkingan">
+            <column name="rk_id">397</column>
+            <column name="rk_alternatif_nama">Peningkatan Ruang Labor Komputer dan Perabotnya Smp 3 Seberida</column>
+            <column name="rk_kriteria_id">2</column>
+            <column name="rk_nilai">0.0936805314524</column>
+            <column name="rk_total">NULL</column>
+        </table>
+        <table name="perangkingan">
+            <column name="rk_id">398</column>
+            <column name="rk_alternatif_nama">Peningkatan Ruang Labor Komputer dan Perabotnya Smp 3 Seberida</column>
+            <column name="rk_kriteria_id">3</column>
+            <column name="rk_nilai">0.0936805314524</column>
+            <column name="rk_total">NULL</column>
+        </table>
+        <table name="perangkingan">
+            <column name="rk_id">399</column>
+            <column name="rk_alternatif_nama">Peningkatan Ruang Labor Komputer dan Perabotnya Smp 3 Seberida</column>
+            <column name="rk_kriteria_id">4</column>
+            <column name="rk_nilai">0.0936805314524</column>
+            <column name="rk_total">NULL</column>
+        </table>
+        <table name="perangkingan">
+            <column name="rk_id">400</column>
+            <column name="rk_alternatif_nama">Peningkatan Ruang Labor Komputer dan Perabotnya Smp 3 Seberida</column>
+            <column name="rk_kriteria_id">5</column>
+            <column name="rk_nilai">0.0936805314524</column>
+            <column name="rk_total">NULL</column>
+        </table>
+        <table name="perangkingan">
+            <column name="rk_id">401</column>
+            <column name="rk_alternatif_nama">Drainase Desa Buluh Rampai </column>
+            <column name="rk_kriteria_id">1</column>
+            <column name="rk_nilai">0.172564401307</column>
+            <column name="rk_total">NULL</column>
+        </table>
+        <table name="perangkingan">
+            <column name="rk_id">402</column>
+            <column name="rk_alternatif_nama">Drainase Desa Buluh Rampai </column>
+            <column name="rk_kriteria_id">2</column>
+            <column name="rk_nilai">0.172564401307</column>
+            <column name="rk_total">NULL</column>
+        </table>
+        <table name="perangkingan">
+            <column name="rk_id">403</column>
+            <column name="rk_alternatif_nama">Drainase Desa Buluh Rampai </column>
+            <column name="rk_kriteria_id">3</column>
+            <column name="rk_nilai">0.172564401307</column>
+            <column name="rk_total">NULL</column>
+        </table>
+        <table name="perangkingan">
+            <column name="rk_id">404</column>
+            <column name="rk_alternatif_nama">Drainase Desa Buluh Rampai </column>
+            <column name="rk_kriteria_id">4</column>
+            <column name="rk_nilai">0.172564401307</column>
+            <column name="rk_total">NULL</column>
+        </table>
+        <table name="perangkingan">
+            <column name="rk_id">405</column>
+            <column name="rk_alternatif_nama">Drainase Desa Buluh Rampai </column>
+            <column name="rk_kriteria_id">5</column>
+            <column name="rk_nilai">0.172564401307</column>
+            <column name="rk_total">NULL</column>
+        </table>
+        <table name="perangkingan">
+            <column name="rk_id">406</column>
+            <column name="rk_alternatif_nama">Peningkatan Kantor Gedung Inspektorat </column>
+            <column name="rk_kriteria_id">1</column>
+            <column name="rk_nilai">0.0904146836278</column>
+            <column name="rk_total">NULL</column>
+        </table>
+        <table name="perangkingan">
+            <column name="rk_id">407</column>
+            <column name="rk_alternatif_nama">Peningkatan Kantor Gedung Inspektorat </column>
+            <column name="rk_kriteria_id">2</column>
+            <column name="rk_nilai">0.0904146836278</column>
+            <column name="rk_total">NULL</column>
+        </table>
+        <table name="perangkingan">
+            <column name="rk_id">408</column>
+            <column name="rk_alternatif_nama">Peningkatan Kantor Gedung Inspektorat </column>
+            <column name="rk_kriteria_id">3</column>
+            <column name="rk_nilai">0.0904146836278</column>
+            <column name="rk_total">NULL</column>
+        </table>
+        <table name="perangkingan">
+            <column name="rk_id">409</column>
+            <column name="rk_alternatif_nama">Peningkatan Kantor Gedung Inspektorat </column>
+            <column name="rk_kriteria_id">4</column>
+            <column name="rk_nilai">0.0904146836278</column>
+            <column name="rk_total">NULL</column>
+        </table>
+        <table name="perangkingan">
+            <column name="rk_id">410</column>
+            <column name="rk_alternatif_nama">Peningkatan Kantor Gedung Inspektorat </column>
+            <column name="rk_kriteria_id">5</column>
+            <column name="rk_nilai">0.0904146836278</column>
+            <column name="rk_total">NULL</column>
+        </table>
+        <table name="perangkingan">
+            <column name="rk_id">411</column>
+            <column name="rk_alternatif_nama">Sarana Prasarana MTQ</column>
+            <column name="rk_kriteria_id">1</column>
+            <column name="rk_nilai">0.1158327395671</column>
+            <column name="rk_total">NULL</column>
+        </table>
+        <table name="perangkingan">
+            <column name="rk_id">412</column>
+            <column name="rk_alternatif_nama">Sarana Prasarana MTQ</column>
+            <column name="rk_kriteria_id">2</column>
+            <column name="rk_nilai">0.1158327395671</column>
+            <column name="rk_total">NULL</column>
+        </table>
+        <table name="perangkingan">
+            <column name="rk_id">413</column>
+            <column name="rk_alternatif_nama">Sarana Prasarana MTQ</column>
+            <column name="rk_kriteria_id">3</column>
+            <column name="rk_nilai">0.1158327395671</column>
+            <column name="rk_total">NULL</column>
+        </table>
+        <table name="perangkingan">
+            <column name="rk_id">414</column>
+            <column name="rk_alternatif_nama">Sarana Prasarana MTQ</column>
+            <column name="rk_kriteria_id">4</column>
+            <column name="rk_nilai">0.1158327395671</column>
+            <column name="rk_total">NULL</column>
+        </table>
+        <table name="perangkingan">
+            <column name="rk_id">415</column>
+            <column name="rk_alternatif_nama">Sarana Prasarana MTQ</column>
+            <column name="rk_kriteria_id">5</column>
+            <column name="rk_nilai">0.1158327395671</column>
+            <column name="rk_total">NULL</column>
+        </table>
+        <table name="perangkingan">
+            <column name="rk_id">416</column>
+            <column name="rk_alternatif_nama">Peningkatan Jalan dalam Kota Rengat </column>
+            <column name="rk_kriteria_id">1</column>
+            <column name="rk_nilai">0.040457911041</column>
+            <column name="rk_total">NULL</column>
+        </table>
+        <table name="perangkingan">
+            <column name="rk_id">417</column>
+            <column name="rk_alternatif_nama">Peningkatan Jalan dalam Kota Rengat </column>
+            <column name="rk_kriteria_id">2</column>
+            <column name="rk_nilai">0.040457911041</column>
+            <column name="rk_total">NULL</column>
+        </table>
+        <table name="perangkingan">
+            <column name="rk_id">418</column>
+            <column name="rk_alternatif_nama">Peningkatan Jalan dalam Kota Rengat </column>
+            <column name="rk_kriteria_id">3</column>
+            <column name="rk_nilai">0.040457911041</column>
+            <column name="rk_total">NULL</column>
+        </table>
+        <table name="perangkingan">
+            <column name="rk_id">419</column>
+            <column name="rk_alternatif_nama">Peningkatan Jalan dalam Kota Rengat </column>
+            <column name="rk_kriteria_id">4</column>
+            <column name="rk_nilai">0.040457911041</column>
+            <column name="rk_total">NULL</column>
+        </table>
+        <table name="perangkingan">
+            <column name="rk_id">420</column>
+            <column name="rk_alternatif_nama">Peningkatan Jalan dalam Kota Rengat </column>
+            <column name="rk_kriteria_id">5</column>
+            <column name="rk_nilai">0.040457911041</column>
+            <column name="rk_total">NULL</column>
+        </table>
+    </database>
+</pma_xml_export>
