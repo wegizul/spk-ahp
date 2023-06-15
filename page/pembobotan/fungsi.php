@@ -531,3 +531,30 @@ function showTabelPerbandingan2($jenis, $alternatif)
 		<input class="btn btn-success" type="submit" name="submit" value="SUBMIT" style="margin-left: 59%;">
 	</form>
 <?php } ?>
+
+<?php
+// mencari nama kriteria
+function getAlternatif($no_urut)
+{
+	include('config.php');
+	$query  = "SELECT rk_alternatif_nama FROM perangkingan GROUP BY rk_alternatif_nama ORDER BY rk_nilai DESC";
+	$result = mysqli_query($koneksi, $query);
+
+	while ($row = mysqli_fetch_array($result)) {
+		$nama[] = $row['rk_alternatif_nama'];
+	}
+	return $nama[($no_urut)];
+}
+
+function getTotal($no_urut)
+{
+	include('config.php');
+	$query  = "SELECT rk_nilai FROM perangkingan GROUP BY rk_alternatif_nama ORDER BY rk_nilai DESC";
+	$result = mysqli_query($koneksi, $query);
+
+	while ($row = mysqli_fetch_array($result)) {
+		$nama[] = $row['rk_nilai'];
+	}
+	return $nama[($no_urut)];
+}
+?>

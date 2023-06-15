@@ -25,11 +25,19 @@ for ($i = 0; $i <= ($n - 1); $i++) {
 
 // menghitung jumlah pada baris kriteria tabel nilai kriteria
 // matrikb merupakan matrik yang telah dinormalisasi
+$koneksi->query("delete from perangkingan");
 for ($x = 1; $x <= $m; $x++) {
   for ($y = 1; $y <= $n; $y++) {
     $value  = $matrik[$x][$y] * $matrikb[$y];
     $total[$x] += $value;
+
+    $wkwk = getAlternatifNama($x - 1);
+    $hehe = getKriteriaID($y - 1);
+    $haha = $total[$x];
+    $sql = $koneksi->query("insert into perangkingan (rk_alternatif_nama, rk_kriteria_id) values ('$wkwk','$hehe')");
   }
+  $awokwok = getAlternatifNama($x - 1);
+  $sql = $koneksi->query("update perangkingan set rk_nilai='$haha' where rk_alternatif_nama='$awokwok'");
 }
 ?>
 <section class="content">
@@ -104,6 +112,7 @@ for ($x = 1; $x <= $m; $x++) {
               <table class="table table-bordered">
                 <thead>
                   <tr>
+                    <th>Rank</th>
                     <th>Kriteria/Alternatif</th>
                     <?php
                     for ($i = 0; $i <= ($n - 1); $i++) {
@@ -115,12 +124,14 @@ for ($x = 1; $x <= $m; $x++) {
                 <tbody>
                   <?php
                   for ($x = 1; $x <= $m; $x++) {
+                    $nilai = number_format((getTotal($x - 1)), 4);
                     echo "<tr>";
-                    echo "<th>" . getAlternatifNama($x - 1) . "</th>";
+                    echo "<th>" . $x . "</th>";
+                    echo "<th>" . getAlternatif($x - 1) . "</th>";
                     for ($y = 1; $y <= $n; $y++) {
                       echo "<td>" . number_format(($matrik[$x][$y] * $matrikb[$y]), 4) . "</td>";
                     }
-                    echo "<td bgcolor='#41fc03'>" . number_format(($total[$x]), 4) . "</td>";
+                    echo "<td bgcolor='#41fc03'>" . $nilai . "</td>";
                     echo "</tr>";
                   } ?>
                 </tbody>
