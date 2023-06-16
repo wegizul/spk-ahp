@@ -20,7 +20,7 @@ $alternatif = $koneksi->query("select * from perangkingan group by rk_alternatif
   <div class="card">
 
     <div class="container">
-      <canvas id="myChart" width="100" height="100"></canvas>
+      <canvas id="myChart" width="100" height="50"></canvas>
     </div>
     <script>
       var ctx = document.getElementById("myChart");
